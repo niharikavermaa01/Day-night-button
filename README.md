@@ -1,10 +1,9 @@
 This project is a simple **HTML + CSS + JavaScript** web page with a toggle button that switches between **Day Mode** ☀️ and **Night Mode** 🌙.  
-It’s a beginner-friendly project that demonstrates how to use JavaScript to change themes dynamically.
+It’s a beginner-friendly project that demonstrates how to use JavaScript to change themes dynamically. I have tried to write a simplest code for this without using any AI tool. 
 
 ## 📌 Features
 - **Day/Night Mode Toggle** button  
 - Smooth background and text color transition  
-- Clean and responsive design  
 - Beginner-friendly code, easy to customize  
 
 ## 📂 Files Included
