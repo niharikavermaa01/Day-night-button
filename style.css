@@ -1,51 +1,33 @@
-
-body{
-  background: -webkit-linear-gradient(rgb(13, 12, 107),rgb(247, 139, 157))
-  
+body {
+  background: linear-gradient(rgb(13, 12, 107), rgb(247, 139, 157));
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.container{
-  height:100vh;
+.container {
+  height: 100vh;
   width: 100vw;
+  position: relative;
 }
-.toggle-btn{
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 20%;
-}
-.buttom{
-  display:inline-block;
 
+/* Center toggle button */
+.toggle-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  z-index: 10;
 }
-.circle-one{
-  left: -20px;
-   background: linear-gradient(rgb(51, 39, 39),black);
-  height: 250px;
-  width: 700px;
-  border-radius: 0% 100% 0% 0%;
-  position: absolute;
-  display: inline;
-}
-.circle-two{
-  border-radius: 100% 0% 0% 0%  ;
-  background: linear-gradient(rgb(34, 25, 25),rgb(37, 31, 31), black);
-  height: 250px;
-  width: 900px;
-  right: -50px;
-  position: absolute;
-}
+
+/* Toggle Switch */
 .toggle-switch {
   position: relative;
   display: inline-block;
-  width: 250px;
-  height: 90px;
-}
-.toggle-switch p{
-  position: relative;
-  font-weight: bolder;
-  margin-left: 10px;
+  width: 200px;
+  height: 150px;
+  max-width: 25vw;
+  max-height: 13vh;
 }
 
 .toggle-switch input {
@@ -54,224 +36,121 @@ body{
   height: 0;
 }
 
-/* The slider background */
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(black, rgb(65, 64, 64), rgb(87, 86, 86), grey);
-  transition: 0.4s;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(black, grey);
   border-radius: 40px;
+  transition: 0.4s;
 }
 
-/* The circle knob */
 .slider::before {
-  position: absolute;
   content: "";
-  height: 85px;
-  width: 90px;
+  position: absolute;
+  height: 85%;
+  width: 35%;
   left: 4px;
   bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
+  background: white;
   border-radius: 50%;
+  transition: 0.4s;
 }
 
-/* When checked, move the knob and change background */
 .toggle-switch input:checked + .slider {
-  background: linear-gradient( rgba(245, 63, 63, 0.801), rgb(241, 105, 105), rgba(255, 166, 0, 0.911), yellow);
+  background: linear-gradient(rgb(241, 105, 105), yellow);
 }
 
 .toggle-switch input:checked + .slider::before {
-  transform: translateX(150px);
+  transform: translateX(170%);
 }
 
-.moon{
-  height: 60px;
-  width: 60px;
-  border-radius: 100%;
-  box-shadow: 1px 1px 12px 10px whitesmoke;
-  background: linear-gradient(white);
-  border-color: white;
+/* Moon */
+.moon {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 1%;
+  right: 6%;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 20px 10px white;
 }
 
-.star1, .star2, .star3, .star4, .star5, .star6, .star7, .star8, .star9{
-  height: 4px;
-  width:4px;
-  border-radius: 100%;
-  background-color: white;
-  filter: blur(1px);
-  animation: tail 3s ease-in-out infinite;
-  
-}
-.star1{
+/* Hills */
+.circle-one {
   position: absolute;
-  margin: 10px 10px 10px 10px ;
-  top: 30px;
-   filter: drop-shadow(0 0 6px #699BFF);
-  animation: tail 3s ease-in-out infinite,
-            
-}
- @keyframes tail {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
+  bottom: 0;
+  left: -10%;
+  width: 70vw;
+  height: 50vh;
+  border-radius: 0% 100% 0% 0%;
+  background: linear-gradient(rgb(51, 39, 39), black);
 }
 
-.star2{
-  position: relative;
-  margin: 10px 10px 10px 10px ;
-  top: -350px;
-  left: 300px;
-  animation: tail 3s ease-in-out infinite;
-
-}
-.star3{
+.circle-two {
   position: absolute;
-  margin: 10px 10px 10px 10px ;
-  top: 50px;
-  left: 400px;
-  animation: tail 3s ease-in-out infinite,
-            falling 3s ease-in-out infinite;
+  bottom: 0;
+  right: -10%;
+  width: 70vw;
+  height: 50vh;
+  border-radius: 100% 0% 0% 0%;
+  background: linear-gradient(rgb(34, 25, 25), black);
 }
 
-.star4{
-    position: relative;
-  margin: 10px 10px 10px 10px ;
-  top: -350px;
-  left: 550px;
-}
-.star5{
-   position: relative;
-  margin: 10px 10px 10px 10px ;
-  top: -350px;
-  left: 750px;
-}
-.star6{
-   position: relative;
-  margin: 10px 10px 10px 10px ;
-  top: -410px;
-  left: 850px;
-}
-.star7{
-  position: relative;
-  margin: 10px 10px 10px 10px ;
-  top: -350px;
-  left: 950px;
-}
-.star8{
-  position: relative;
-  margin: 10px 10px 10px 10px ;
-  top: -450px;
-  left: 1050px;
-}
-.star9{
-    position: relative;
-  margin: 10px 10px 10px 10px ;
-  top: -370px;
-  left: 1150px;
-}
-
-.tree1{
-  height: 200px;
-  width: 100px;
-  background-color: black;
+/* Stars */
+.star1, .star2, .star3, .star4, .star5, .star6, .star7, .star8, .star9 {
   position: absolute;
-  top: 170px;
-  left: 80px;
+  width: 0.5vh;
+  height: 0.5vh;
+  border-radius: 50%;
+  background: white;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.star1 { top: 15%; left: 10%; }
+.star2 { top: 20%; left: 30%; }
+.star3 { top: 10%; left: 50%; }
+.star4 { top: 18%; left: 70%; }
+.star5 { top: 25%; left: 80%; }
+.star6 { top: 12%; left: 60%; }
+.star7 { top: 30%; left: 20%; }
+.star8 { top: 28%; left: 45%; }
+.star9 { top: 22%; left: 85%; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Trees */
+.tree1, .tree2, .tree3 {
+  position: absolute;
+  top: 30%;
+  /* bottom: 0; */
+  background: black;
   clip-path: polygon(
     50% 0,
-    75% 15%,
-    55% 10%,
-    80% 30%,
-    60% 25%,
-    85% 50%,
-    67% 45%,
-    100% 70%,
-    55% 60%,
-    55% 100%,
-    45% 100%,
-    45% 60%,
-    0 70%,
-    35% 45%,
-    15% 50%,
-    40% 25%,
-    20% 30%,
-    45% 10%,
-    25% 10%
+    75% 15%, 55% 10%, 80% 30%, 60% 25%,
+    85% 50%, 67% 45%, 100% 70%, 55% 60%,
+    55% 100%, 45% 100%, 45% 60%, 0 70%,
+    35% 45%, 15% 50%, 40% 25%, 20% 30%,
+    45% 10%, 25% 10%
   );
 }
 
+.tree1 { height: 40vh; width: 8vw; left: 9%; }
+.tree2 { height: 25vh; width: 7vw; left: 3%; }
+.tree3 { height: 18vh; width: 5vw; left: 18%; top: 40%}
 
-.tree2{
-  height: 100px;
-  width: 50px;
-  background-color: black;
-  position: absolute;
-  top: 270px;
-  left: 10px;
-  clip-path: polygon(
-    50% 0,
-    75% 15%,
-    55% 10%,
-    80% 30%,
-    60% 25%,
-    85% 50%,
-    67% 45%,
-    100% 70%,
-    55% 60%,
-    55% 100%,
-    45% 100%,
-    45% 60%,
-    0 70%,
-    35% 45%,
-    15% 50%,
-    40% 25%,
-    20% 30%,
-    45% 10%,
-    25% 10%
-  );
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .toggle-switch { width: 150px; height: 55px; }
+  .moon { width: 5vh; height: 5vh; }
 }
 
-
-.tree3{
-  height: 120px;
-  width: 70px;
-  background-color: black;
-  position: absolute;
-  top: 270px;
-  left: 200px;
-  clip-path: polygon(
-    50% 0,
-    75% 15%,
-    55% 10%,
-    80% 30%,
-    60% 25%,
-    85% 50%,
-    67% 45%,
-    100% 70%,
-    55% 60%,
-    55% 100%,
-    45% 100%,
-    45% 60%,
-    0 70%,
-    35% 45%,
-    15% 50%,
-    40% 25%,
-    20% 30%,
-    45% 10%,
-    25% 10%
-  );
+@media (max-width: 480px) {
+  .toggle-switch { width: 120px; height: 45px; }
+  .moon { width: 4vh; height: 4vh; }
+  .tree1, .tree2, .tree3 { bottom: -2%; }
 }

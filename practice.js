@@ -17,8 +17,7 @@
 
       moon.style.background = 'radial-gradient(circle, yellow, orange)';
       moon.style.boxShadow = '0 0 20px 10px rgba(255, 255, 100, 0.8)';
-      
-      p.innerHTML='life after <br> you guys'
+    
       p.style.marginLeft= '162px';
       p.style.transition= '0.4s';
 
@@ -40,7 +39,6 @@
       tree2.style.background= 'black';
       tree3.style.background= 'black';
       
-      p.innerHTML='Life before  <br> you guys'
       p.style.marginLeft= '10px';
 
       circleOne.style.background = 'linear-gradient(rgb(51, 39, 39), black)';
