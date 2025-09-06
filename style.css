@@ -58,7 +58,7 @@ body {
 }
 
 .toggle-switch input:checked + .slider {
-  background: linear-gradient(rgb(241, 105, 105), yellow);
+  background: linear-gradient(rgb(234, 100, 100), yellow);
 }
 
 .toggle-switch input:checked + .slider::before {
